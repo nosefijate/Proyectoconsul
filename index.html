@@ -5,33 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css"> -->
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="/web_consul_llera/css/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/web_consul_llera/estilo.css"> -->
     <title>Primer Sitio</title>
 </head>
 <body>
-    <header>  
+    <header> 
         <div class="header__nav__flex">
              <a class="header__nav_home" href="index.html"><img src="./imagenes/imagine home.jpg" alt="logo home"></a>
-                <nav>
-                    <ul class="header__nav__estilo">
-                        <li> 
-                            <a href="/web_consul_llera/paginas/especialidades.html">Especialidades</a>
-                        </li>
-                        <li>
-                            <a href="/web_consul_llera/paginas/experiencias.html">Experiencias</a>
-                        </li>
-                        <li>
-                            <a href="/web_consul_llera/paginas/Equipo.html">Equipo</a>
-                        </li>
-                        <li>
-                            <a href="/web_consul_llera/paginas/contacto.html">Contacto</a>
-                        </li>
-                    </ul> 
+                <nav class="navbar navbar-expand-sm navbar-light" >
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="opciones"> 
+                        <ul class="header__nav__estilo">
+                            <li> 
+                                <a href="/web_consul_llera/paginas/especialidades.html">Especialidades</a>
+                            </li>
+                            <li>
+                                <a href="/web_consul_llera/paginas/experiencias.html">Experiencias</a>
+                            </li>
+                            <li>
+                                <a href="#equipo">Equipo</a>
+                            </li>
+                            <li>
+                                <a href="/web_consul_llera/paginas/contacto.html">Contacto</a>
+                            </li>
+                        </ul> 
+                    </div> 
                 </nav>
         </div>    
     </header>
@@ -60,24 +66,25 @@
             <img src="./imagenes/endo.jpg" class="img-fluid" alt="endodoncia odontologia antes y despues">
             <img src="./imagenes/antes y despues otdon.jpg" class="img-fluid" alt="ortodoncia antes y despues">
         </div>
-        <div class="body__equipo">
+        <div id="equipo" class="body__equipo">
+            <h3>Equipo</h3>
             <ul class="list-unstyled">
                 <li class="media">
-                  <img class="mr-3" src="..." alt="Generic placeholder image">
+                  <img class="img-fluid" src="./imagenes/mujer.jpg" alt="Dra maria gatti">
                   <div class="media-body">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                   </div>
                 </li>
                 <li class="media my-4">
-                  <img class="mr-3" src="..." alt="Generic placeholder image">
+                  <img class="img-fluid" src="./imagenes/hmbre.jpg" alt="Dr Carlos Heredia">
                   <div class="media-body">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                   </div>
                 </li>
                 <li class="media">
-                  <img class="mr-3" src="..." alt="Generic placeholder image">
+                  <img class="img-fluid" src="./imagenes/descarga.jpg" alt="Dra Camila Calderon">
                   <div class="media-body">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
