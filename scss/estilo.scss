@@ -1,0 +1,199 @@
+
+* {
+    margin: 0px; 
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header__nav__flex {
+    background-image: linear-gradient(to top,#0d198b,#2037FA );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav_home{
+    margin: 0.6em 0 0.4em 1.2em ;
+}
+
+/*animacion tipo flash*/
+.header__nav_home :hover {
+    animation-name: aparecerdesaparece;
+    animation-duration: 300ms;    
+} 
+
+@keyframes aparecerdesaparece {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0.8;
+    }
+}
+
+.header__nav_home img { 
+    width:5rem;
+    border-radius: 100%;
+}
+
+.header__nav__estilo {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 3em;
+    border-style: solid;
+    border-color: #2037FA;
+    border-radius: 10%;
+
+}
+
+li a {
+    display: block;
+    padding: 0.2em 0.5em ;
+    text-decoration: none;
+    color: #d1cece;
+    border-radius: 5%;
+}
+
+li a:hover {
+    background-color: #0d198b;
+    text-decoration: none;
+}
+
+.body__main__grilla {display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:'titulos titulos'   
+                        "titulos titulos"
+                        'section imagenes'
+                        "equipo equipo"
+                        "especialidades especialidades"
+                        "carousel carousel"
+                        "formulario formulario";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 50% 50%;
+}
+
+.body__todo__fondo {
+    grid-area: titulos;
+    background-image:url(/web_consul_llera/imagenes/images.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+}
+
+.body__titulo_estilo {
+    font-size: 2rem;
+    text-align:center;
+    background: #e8e8e8;
+}
+
+.body__texto_estilo {
+    grid-area: section;
+    background-color: #e8e8e8;
+    padding:1rem 1rem  ;
+    font-size: 3.5vw;
+    color: black;
+}
+
+.body__texto_estilo h2 { 
+    font-size: 2rem ;
+}
+
+.body__images_lugar {
+    grid-area: imagenes;
+    padding:1rem 1rem;
+    background-color: #e8e8e8;
+}
+
+.body__images_lugar img{
+    width: 44rem;
+    padding: 0.5rem;
+}
+
+.body__images_lugar img:hover{
+    transition: all 3s;
+    transform: scale(1.1);
+};
+    
+#carouselExampleControls {
+    grid-area: carousel;
+    background-color: #e8e8e8;
+    padding: 3rem ;
+}
+
+.body__equipo{
+    background-color: #e8e8e8;
+    color:black;
+    grid-area: equipo;
+    padding-left: 2.5rem ;
+    font-size: 1rem;
+}
+
+.body__equipo li {
+    border-radius: 0%;   
+}
+.body__equipo img {
+    width: 10rem ;
+    padding-right: 10px;
+    height: max($numbers: 12rem)
+}
+
+.body__formulario_color{
+    background-color: #0d198b;
+    color: #e8e8e8;
+    grid-area: formulario;
+    padding: 1rem;
+
+}
+.card-group {
+    grid-area: especialidades;
+    background-color: #e8e8e8;
+    
+}
+.card {
+    width: 20rem;
+    margin-left: 7rem;
+}
+
+.modal-title {color: black;}
+/* footers!!!! */
+.footer__nav__estilo { 
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-content: flex-end;
+    gap: 20px; 
+    padding: 10px;;
+    
+}
+
+.footer__nav__fondo{
+    background-image: linear-gradient(to bottom,#0d198b,#2037FA ) ;
+    position: absolute ;
+    width:100% ;
+    max-height: 100%;
+}
+
+@media (max-width: 768px) {
+    .footer__nav__estilo {
+        display: none;
+    }
+.footer__fondo {
+    background-image: linear-gradient(to bottom,#0d198b,#2037FA ) ;
+    color: #c2c2c2;
+    text-align: center;
+}
+
+}   
