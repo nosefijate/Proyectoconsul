@@ -1,11 +1,8 @@
-/* Colores #32AD75;#0CFA8D;#FA9430;#0d198b;#2037FA*/
-
 
 * {
     margin: 0px; 
     padding: 0px;
     font-family: 'Nunito', sans-serif;
-
 }
 
 .header__nav__flex {
@@ -53,9 +50,8 @@ li {
     display: inline-block;
     margin-right: 3em;
     border-style: solid;
-    border-color: #fa9430;
+    border-color: #2037FA;
     border-radius: 10%;
-    padding: em;
 
 }
 
@@ -63,21 +59,24 @@ li a {
     display: block;
     padding: 0.2em 0.5em ;
     text-decoration: none;
-    color: #fff;
+    color: #d1cece;
     border-radius: 5%;
 }
 
 li a:hover {
-    background-color: #df862d;
-    ;
+    background-color: #0d198b;
+    text-decoration: none;
 }
 
 .body__main__grilla {display: grid;
     width: 100%;
     height: 100%;
-    grid-template-areas:'titulos titulos'
+    grid-template-areas:'titulos titulos'   
+                        "titulos titulos"
                         'section imagenes'
                         "equipo equipo"
+                        "especialidades especialidades"
+                        "carousel carousel"
                         "formulario formulario";
     grid-template-rows: 100px 1fr;
     grid-template-columns: 50% 50%;
@@ -89,26 +88,31 @@ li a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    height: 25rem;
 }
 
 .body__titulo_estilo {
-    font-size: xx-large;
-    text-align: center;
+    font-size: 2rem;
+    text-align:center;
+    background: #e8e8e8;
 }
 
 .body__texto_estilo {
     grid-area: section;
-    background-color: #0d198b;
-    padding:1rem  ;
-    font-size: 2.5rem;
-    color: beige;
+    background-color: #e8e8e8;
+    padding:1rem 1rem  ;
+    font-size: 3.5vw;
+    color: black;
+}
+
+.body__texto_estilo h2 { 
+    font-size: 2rem ;
 }
 
 .body__images_lugar {
     grid-area: imagenes;
     padding:1rem 1rem;
-    background-color: #0d198b;
+    background-color: #e8e8e8;
 }
 
 .body__images_lugar img{
@@ -118,21 +122,49 @@ li a:hover {
 
 .body__images_lugar img:hover{
     transition: all 3s;
-    transform: scale(1.2);
+    transform: scale(1.1);
+};
+    
+#carouselExampleControls {
+    grid-area: carousel;
+    background-color: #e8e8e8;
+    padding: 3rem ;
 }
 
 .body__equipo{
-    background-color: #0d198b;
-    color:beige;
+    background-color: #e8e8e8;
+    color:black;
     grid-area: equipo;
+    padding-left: 2.5rem ;
+    font-size: 1rem;
 }
+
+.body__equipo li {
+    border-radius: 0%;   
+}
+.body__equipo img {
+    width: 10rem ;
+    padding-right: 10px;
+    height: max($numbers: 12rem)
+}
+
 .body__formulario_color{
     background-color: #0d198b;
-    color: beige;
+    color: #e8e8e8;
     grid-area: formulario;
     padding: 1rem;
 
 }
+.card-group {
+    grid-area: especialidades;
+    background-color: #e8e8e8;
+    
+}
+.card {
+    width: 20rem;
+    margin-left: 7rem;
+}
+
 .modal-title {color: black;}
 /* footers!!!! */
 .footer__nav__estilo { 
@@ -155,10 +187,13 @@ li a:hover {
 }
 
 @media (max-width: 768px) {
-    .body__texto_estilo {
-        grid-area: section;
-        background-color: tomato;
-        padding:1rem  ;
-        font-size: 3rem;
-    }   
+    .footer__nav__estilo {
+        display: none;
+    }
+.footer__fondo {
+    background-image: linear-gradient(to bottom,#0d198b,#2037FA ) ;
+    color: #c2c2c2;
+    text-align: center;
 }
+
+}   
