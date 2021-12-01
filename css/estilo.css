@@ -95,9 +95,13 @@ li a:hover {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-areas: 'titulos titulos'   
-  "titulos titulos"
- 'section imagenes';
+      grid-template-areas: 'titulos titulos'   
+ "titulos titulos"
+ 'section imagenes'
+ "equipo equipo"
+ "especialidades especialidades"
+ "carousel carousel"
+ "formulario formulario";
   -ms-grid-rows: 100px 1fr;
       grid-template-rows: 100px 1fr;
   -ms-grid-columns: 50% 50%;
@@ -116,6 +120,11 @@ li a:hover {
   background-position: center;
   height: 25rem;
 }
+.body__titulo {
+  font-size: 2rem;
+  background-color: #e8e8e8;
+  margin: 0;
+}
 
 .body__titulo_estilo {
   font-size: 2rem;
@@ -129,25 +138,27 @@ li a:hover {
   grid-area: section;
   background-color: #e8e8e8;
   padding: 1rem 1rem;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   color: black;
 }
 
 .body__texto_estilo h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .body__images_lugar {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: imagenes;
-  padding: 1rem 1rem;
+  justify-content: center;
+  padding: 2rem;
   background-color: #e8e8e8;
 }
 
 .body__images_lugar img {
-  width: 44rem;
-  padding: 0.5rem;
+  width: 35rem;
+  padding: 0.5rem
+  ;
 }
 
 .body__images_lugar img:hover {
@@ -157,23 +168,13 @@ li a:hover {
           transform: scale(1.1);
 }
 
-.body__titulo {
-  padding: 2rem;
-  background-color: #e8e8e8;
-  margin: 0px;
-}
-
 #carouselExampleControls {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: carousel;
   background-color: #e8e8e8;
-  padding: 20rem;
-}
-
-.body__equipo__titulo {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .body__equipo {
@@ -217,7 +218,7 @@ li a:hover {
 
 .card {
   width: 20rem;
-  margin: 2rem;
+  margin: 7rem;
 }
 
 .modal-title {
