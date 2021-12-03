@@ -97,11 +97,7 @@ li a:hover {
   height: 100%;
       grid-template-areas: 'titulos titulos'   
  "titulos titulos"
- 'section imagenes'
- "equipo equipo"
- "especialidades especialidades"
- "carousel carousel"
- "formulario formulario";
+ 'section imagenes';
   -ms-grid-rows: 100px 1fr;
       grid-template-rows: 100px 1fr;
   -ms-grid-columns: 50% 50%;
@@ -114,7 +110,7 @@ li a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: titulos;
-  background-image: url(/web_consul_llera/imagenes/images.jpg);
+  background-image: url(../imagenes/images.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -169,10 +165,6 @@ li a:hover {
 }
 
 #carouselExampleControls {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: carousel;
   background-color: #e8e8e8;
   padding: 3rem;
 }
@@ -180,10 +172,6 @@ li a:hover {
 .body__equipo {
   background-color: #e8e8e8;
   color: black;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: equipo;
   padding-left: 2.5rem;
   font-size: 1rem;
 }
@@ -197,15 +185,25 @@ li a:hover {
   padding-right: 10px;
   height: 12rem;
 }
-
+.titulo__contacto{
+  background-color: #0d198b;
+  color: #e8e8e8;
+  margin: 0;
+}
 .body__formulario_color {
   background-color: #0d198b;
   color: #e8e8e8;
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: formulario;
+  display: grid;
+  grid-template-areas: "contacto imagen";
   padding: 1rem;
+}
+.body__formulario{
+  grid-area: contacto;
+}
+.imagen__mapa{
+  grid-area: imagen;
+  margin: 4rem;
+  margin-top: 0px;
 }
 
 .card-group {
@@ -255,6 +253,9 @@ li a:hover {
 
 @media (max-width: 768px) {
   .footer__nav__estilo {
+    display: none;
+  }
+  .imagen__mapa{
     display: none;
   }
   .footer__fondo {
